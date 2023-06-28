@@ -12,9 +12,14 @@ console.verbose("Loaded pacHandle");
 
 const rsa = require("./utils/rsa");
 const fs = require("fs");
+const { exit } = require("process");
 console.verbose("Loaded required imports");
 
 // Attempt to load our key
+if (!fs.existsSync(".key")) {
+    console.error("No personal encryption keypair found, please generate one first!\nTry using:\n  rsa.createKey(true)")
+    exit(1)
+}
 key = Buffer.from(JSON.parse(fs.readFileSync(".key").toString()).s);
 
 
