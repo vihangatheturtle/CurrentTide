@@ -1,0 +1,12 @@
+{
+  "name": "currenttide",
+  "version": "1.0.0",
+  "description": "The privacy-focused data sharing protocol",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "Vihanga Weerasinghe (vihanga.we@gmail.com)",
+  "license": "ISC"
+}
